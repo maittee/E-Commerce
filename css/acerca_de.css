@@ -1,0 +1,43 @@
+#acerca-de {
+  margin-top: 10px;
+  background-color: var(--color-violet);
+  color: var(--color-white);
+  text-align: center;
+}
+
+#acerca-de h3.subtitulo {
+  font-weight: bold;
+  margin: 10px;
+}
+
+#acerca-de p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+  color: var(--color-white);
+}
+
+/* Media Query para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  #acerca-de h3.subtitulo {
+    font-size: 2rem;
+  }
+
+  #acerca-de p {
+    font-size: 1rem;
+  }
+}
+
+/* Media query para pantallas a partir de 650px */
+@media (max-width: 650px) {
+  #acerca-de h3.subtitulo {
+    font-size: 1.5rem; 
+    }
+
+  #acerca-de p {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+}

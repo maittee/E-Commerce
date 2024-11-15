@@ -79,6 +79,7 @@ section {
   z-index: 1000;
 }
 
+/*Menu del navbar*/
 .menu-container {
   display: flex;
 }
@@ -109,6 +110,35 @@ section {
   transition: all 0.5s ease;
 }
 
+/* Seccion de bienvenida */
+.bienvenida {
+  background-color: var(--color-dark-violet);
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
+  gap: 20px; 
+}
+
+.bienvenida h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  order: 0; /* El título se pone primero en la dirección por defecto */
+}
+
+.bienvenida p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 /* Carousel */
 .carousel {
   margin-top: 10px; /* Espacio superior antes del carrusel */
@@ -126,7 +156,7 @@ section {
   background-color: var(--color-violet);
 }
 
-/* Formulario */
+/* Formulario - Contacto*/
 #contacto {
   margin-top: 10px;
 }
@@ -147,18 +177,14 @@ section {
   width: 60%;
   /* Ajusta el ancho del formulario según sea necesario */
   box-shadow: 0 0 15px #605b857a;
-  /* Añade una sombra para dar un poco de estilo */
   background-color: var(--color-white);
-  /* Fondo blanco para destacar */
 }
 
 #contacto label,
 #contacto input,
 #contacto textarea {
   width: 100%;
-  /* Hacer que todos los elementos llenen el ancho del contenedor */
   margin: 10px 0;
-  /* Añadir margen vertical para separar los elementos */
 }
 
 #contacto textarea {
@@ -166,6 +192,7 @@ section {
 }
 
 /* Botones - formulario*/
+
 .boton {
   font-family: var(--tipo-principal);
   font-size: 20px;
@@ -236,28 +263,27 @@ footer {
     align-items: center; /* Centra el contenido (logo y menú) */
   }
 
-  /* Ocultar el logo en pantallas pequeñas */
+  /* Ocultar el logo en pantallas menores a 650px */
   .logo img {
-    display: none; /* El logo desaparecerá cuando el ancho sea menor a 650px */
+    display: none;
   }
 
-  /* Contenedor del menú (en grid en pantallas pequeñas) */
   .menu-container {
     width: 100%;
     display: flex;
-    justify-content: center; /* Centra el menú horizontalmente */
+    justify-content: center;
   }
 
-  /* Menú en 3 columnas usando Grid */
+  /* Se particiona el menu en 3 columnas usando Grid */
   .menu {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 15px; /* Espacio entre las opciones */
+    gap: 15px; 
     padding: 0;
     margin: 0;
     list-style: none;
-    justify-items: center; /* Centra las opciones dentro de las celdas */
-    width: 100%; /* Asegura que el menú ocupe todo el ancho disponible */
+    justify-items: center; 
+    width: 100%; 
   }
 
   .menu li {
@@ -266,6 +292,22 @@ footer {
 
   .menu li a {
     font-size: 14px;
+  }
+
+  /* Mensaje de bienvenida */
+  .bienvenida {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bienvenida h1 {
+    font-size: 2rem; 
+    margin-top: 10px;
+  }
+
+  .bienvenida p {
+    font-size: 1rem; 
+    margin-top: 10px;
   }
 
   main {
@@ -289,9 +331,12 @@ footer {
     padding: 12px; /* Un poco más de espacio en los botones */
   }
 
-  .boton {
-    width: 100%;
-    text-wrap: wrap;
+  .centrar.botones {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: wrap;
+    width: 100%; 
   }
 
   main {
@@ -299,21 +344,15 @@ footer {
     margin-right: 5px;
   }
 
-  /* Ajustamos el ancho de las tarjetas */
-  .producto {
-    width: 90%;
-    /* Las tarjetas ocupan el 90% del ancho */
-  }
-
   /* Ajustamos la altura de las imágenes del carrusel */
   .carousel-item img {
-    height: 200px; /* Ajustamos la altura de las imágenes para pantallas pequeñas */
-    object-fit: contain; /* Asegura que las imágenes mantengan su proporción */
+    height: 200px;
+    object-fit: contain; 
   }
 
   .carousel-inner {
     width: 100%;
-    padding: 0 10px; /* Agrega algo de espacio alrededor para evitar que la imagen se salga */
+    padding: 0 10px;
   }
 
   /* Ajustamos los títulos en el pie de página */

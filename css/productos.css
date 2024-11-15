@@ -2,9 +2,7 @@
 .productos {
   display: flex;
   justify-content: space-between;
-  /* Espaciamos las tarjetas de forma uniforme */
   flex-wrap: wrap;
-  /* Permitimos que las tarjetas pasen a la siguiente línea si es necesario */
   margin: 20px;
   gap: 2rem;
 }
@@ -17,7 +15,6 @@
   padding: 15px;
   text-align: center;
   box-shadow: 0 4px 8px var(--color-black);
-  /* Añadimos sombra */
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
   border-radius: 10px;
@@ -29,15 +26,14 @@
 
 .producto:hover {
   transform: scale(1.02);
-  /* Agrandamos ligeramente la tarjeta al pasar el mouse */
 }
 
 /* Imagen del producto */
 .producto img {
-  max-width: 70%;
+  max-width: 60%;
   height: auto;
-  margin-bottom: 10px;
-  object-fit: contain; /* Aseguramos que la imagen mantenga su proporción */
+  margin-bottom: 5px;
+  object-fit: contain;
 }
 
 /* Texto del precio */
@@ -64,7 +60,7 @@
 
 /* Texto del producto */
 .producto p {
-  font-size: 0.85rem; /* Reducimos el tamaño del texto de la descripción */
+  font-size: 0.85rem;
   color: var(--color-black);
   line-height: 1.4;
   margin-bottom: 10px;
@@ -76,9 +72,9 @@
   color: var(--color-black);
   border: 2px solid rgba(0, 0, 0, 0.596);
   border-radius: 10px;
-  padding: 8px 15px; /* Reducimos el tamaño del botón */
+  padding: 8px 15px;
   cursor: pointer;
-  font-size: 0.9rem; /* Reducimos el tamaño de la fuente en el botón */
+  font-size: 0.9rem;
   transition: all 0.3s ease-in-out;
 }
 
@@ -91,17 +87,14 @@
 @media (max-width: 768px) {
   .productos {
     justify-content: center;
-    /* Centramos los productos en pantallas más pequeñas */
   }
 
   .producto {
     width: 45%;
-    /* Las tarjetas ocuparán el 45% en lugar del 22% en pantallas medianas */
   }
 
   .producto img {
     max-width: 80%;
-    /* Reducimos el tamaño de las imágenes para que se adapten mejor */
   }
 }
 
@@ -109,16 +102,13 @@
 @media (max-width: 480px) {
   .productos {
     justify-content: center;
-    /* Centramos los productos en pantallas pequeñas */
   }
 
   .producto {
     width: 90%;
-    /* Las tarjetas ocuparán el 90% en pantallas*/
   }
 
   .producto img {
     max-width: 75%;
-    /* Las imágenes se harán más chicas*/
   }
 }
