@@ -1,0 +1,124 @@
+/* Contenedor de productos */
+.productos {
+  display: flex;
+  justify-content: space-between;
+  /* Espaciamos las tarjetas de forma uniforme */
+  flex-wrap: wrap;
+  /* Permitimos que las tarjetas pasen a la siguiente línea si es necesario */
+  margin: 20px;
+  gap: 2rem;
+}
+
+/* Estilo de cada tarjeta de producto */
+.producto {
+  background-color: white;
+  width: calc(33% - 2rem);
+  margin-bottom: 20px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px var(--color-black);
+  /* Añadimos sombra */
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.producto:hover {
+  transform: scale(1.02);
+  /* Agrandamos ligeramente la tarjeta al pasar el mouse */
+}
+
+/* Imagen del producto */
+.producto img {
+  max-width: 70%;
+  height: auto;
+  margin-bottom: 10px;
+  object-fit: contain; /* Aseguramos que la imagen mantenga su proporción */
+}
+
+/* Texto del precio */
+.producto .precio {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.producto .info-producto{
+    flex-grow: 1;
+    display: flex;
+    flex-direction:column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: start;
+}
+
+.producto .info-producto .precio-carro{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+/* Texto del producto */
+.producto p {
+  font-size: 0.85rem; /* Reducimos el tamaño del texto de la descripción */
+  color: var(--color-black);
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+/* Botón de añadir al carrito */
+.producto .boton-compra {
+  background-color: var(--color-pink-violet);
+  color: var(--color-black);
+  border: 2px solid rgba(0, 0, 0, 0.596);
+  border-radius: 10px;
+  padding: 8px 15px; /* Reducimos el tamaño del botón */
+  cursor: pointer;
+  font-size: 0.9rem; /* Reducimos el tamaño de la fuente en el botón */
+  transition: all 0.3s ease-in-out;
+}
+
+.producto button:hover {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}
+
+/* Pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  .productos {
+    justify-content: center;
+    /* Centramos los productos en pantallas más pequeñas */
+  }
+
+  .producto {
+    width: 45%;
+    /* Las tarjetas ocuparán el 45% en lugar del 22% en pantallas medianas */
+  }
+
+  .producto img {
+    max-width: 80%;
+    /* Reducimos el tamaño de las imágenes para que se adapten mejor */
+  }
+}
+
+/* Pantallas pequeñas (celular) */
+@media (max-width: 480px) {
+  .productos {
+    justify-content: center;
+    /* Centramos los productos en pantallas pequeñas */
+  }
+
+  .producto {
+    width: 90%;
+    /* Las tarjetas ocuparán el 90% en pantallas*/
+  }
+
+  .producto img {
+    max-width: 75%;
+    /* Las imágenes se harán más chicas*/
+  }
+}

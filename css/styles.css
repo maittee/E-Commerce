@@ -1,309 +1,329 @@
 /*Configuraciones generales*/
 :root {
-    --color-pink: rgb(243, 196, 204);
-    --color-black: #120907;
-    --color-dark-violet: #26253a;
-    --color-medium-violet: #605b85;
-    --color-violet: #a39ddf;
-    --color-pink-violet: #e6d5ed;
-    --color-white: rgb(255, 255, 255);
-    --tipo-principal: 'Roboto Mono', monospace;
+  --color-pink: rgb(224, 162, 172);
+  --color-black: #120907;
+  --color-dark-violet: #26253a;
+  --color-medium-violet: #605b85;
+  --color-violet: #a39ddf;
+  --color-pink-violet: #e6d5ed;
+  --color-white: rgb(255, 255, 255);
+  --tipo-principal: "Roboto Mono", monospace;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 60px;
-    height: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 60px;
+  height: auto;
 }
 
 body {
-    font-family: var(--tipo-principal);
+  font-family: var(--tipo-principal);
 }
 
 section {
-    scroll-margin-top: 60px;
+  scroll-margin-top: 60px;
 }
 
 /*---------------------------*/
+.subtitulo {
+  margin: 10px 0;
+}
+
 .centrar {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-.logo {
-    height: 100%;
-    max-height: 60px;
-    display: flex;
-    align-items: center;
-}
-
+/* Logo */
 .logo img {
-    max-height: 100%;
-    width: auto;
+  max-width: 100%; /* Asegura que el logo se ajuste al tamaño del contenedor */
+  height: auto;
+  max-height: 60px; /* Establece una altura máxima para el logo */
+  display: flex;
+  align-items: center;
 }
 
-/* Nabvar */
+/* Navbar */
 .navbar-items {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 60px;
-    background-color: var(--color-pink-violet);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 25px;
-    transition: all 0.5s ease;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-pink-violet);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  transition: all 0.5s ease;
+  z-index: 1000;
 }
 
-/* Menu */
+.menu-container {
+  display: flex;
+}
+
 .menu {
-    display: flex;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .menu li {
-    list-style: none;
-    margin: 10px;
+  margin: 10px;
 }
 
 .menu li a {
-    color: var(--color-black);
-    text-decoration: none;
-    font: bold;
+  color: var(--color-black);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .menu li a:hover {
-    padding: 5px;
-    background-color: var(--color-violet);
-    color: var(--color-black);
-    font-weight: bold;
-    border-radius: 20px;
-    transition: all 0.5s ease;
+  padding: 5px;
+  background-color: var(--color-violet);
+  color: var(--color-black);
+  font-weight: bold;
+  border-radius: 20px;
+  transition: all 0.5s ease;
 }
 
-.subtitulo {
-    margin: 10px 0;
+/* Carousel */
+.carousel {
+  margin-top: 10px; /* Espacio superior antes del carrusel */
+  max-width: 100%; /* Asegura que el carrusel no se desborde */
+}
+
+.carousel-item img {
+  height: 500px; /* Altura fija de las imágenes */
+  object-fit: contain; /* Las imágenes cubren todo el espacio disponible */
+  padding: 10px;
+}
+
+/* Productos destacados */
+.productos-destacados {
+  background-color: var(--color-violet);
 }
 
 /* Formulario */
+#contacto {
+  margin-top: 10px;
+}
+
 #contacto form {
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    /* Alinea los elementos del formulario en una columna */
-    align-items: center;
-    /* Centra los elementos horizontalmente */
-    justify-content: center;
-    /* Centra los elementos verticalmente */
-    margin: 0 auto;
-    /* Centra el contenedor del formulario */
-    padding: 20px;
-    width: 50%;
-    /* Ajusta el ancho del formulario según sea necesario */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Añade una sombra para dar un poco de estilo */
-    background-color: var(--color-white);
-    /* Fondo blanco para destacar */
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  /* Alinea los elementos del formulario en una columna */
+  align-items: center;
+  /* Centra los elementos horizontalmente */
+  justify-content: center;
+  /* Centra los elementos verticalmente */
+  margin: 0 auto;
+  /* Centra el contenedor del formulario */
+  padding: 20px;
+  /* Ancho por defecto en pantallas grandes */
+  width: 60%;
+  /* Ajusta el ancho del formulario según sea necesario */
+  box-shadow: 0 0 15px #605b857a;
+  /* Añade una sombra para dar un poco de estilo */
+  background-color: var(--color-white);
+  /* Fondo blanco para destacar */
 }
 
 #contacto label,
 #contacto input,
 #contacto textarea {
-    width: 100%;
-    /* Hacer que todos los elementos llenen el ancho del contenedor */
-    margin: 10px 0;
-    /* Añadir margen vertical para separar los elementos */
+  width: 100%;
+  /* Hacer que todos los elementos llenen el ancho del contenedor */
+  margin: 10px 0;
+  /* Añadir margen vertical para separar los elementos */
 }
 
 #contacto textarea {
-    resize: none;
+  resize: none;
 }
 
 /* Botones - formulario*/
-
 .boton {
-    font-family: var(--tipo-principal);
-    font-size: 20px;
-    padding: 10px;
-    margin: 10px;
-    border: 2px solid rgba(0, 0, 0, 0.596);
-    border-radius: 10px;
-    width: 100%;
+  font-family: var(--tipo-principal);
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.596);
+  border-radius: 10px;
+  width: 100%;
 }
 
 #boton-enviar {
-    background-color: var(--color-pink-violet);
+  background-color: var(--color-pink-violet);
 }
 
 #boton-enviar:hover {
-    background-color: var(--color-pink);
-    color: var(--color-white);
+  background-color: var(--color-pink);
+  color: var(--color-white);
 }
 
 #boton-borrar {
-    background-color: var(--color-violet);
+  background-color: var(--color-violet);
 }
 
 #boton-borrar:hover {
-    background-color: var(--color-black);
-    color: white;
-    border: 2px solid rgba(0, 0, 0, 0.596);
+  background-color: var(--color-black);
+  color: white;
+  border: 2px solid rgba(0, 0, 0, 0.596);
 }
 
-/*Productos*/
-.productos {
-    display: flex;
-    /* Usamos flexbox */
-    justify-content: space-around;
-    /* Espaciamos las tarjetas uniformemente */
-    flex-wrap: wrap;
-    /* Permitimos que las tarjetas pasen a la siguiente línea si es necesario */
-    margin-top: 20px;
-    /* Espacio superior */
-}
-
-.producto {
-    background-color: white;
-    width: 30%;
-    /*cada producto ocupa un 30% del ancho del contenedor (tres productos por fila)*/
-    margin-bottom: 20px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 4px 8px var(--color-black);
-    /*  (añadimos una sutil sombra) */
-    box-sizing: border-box;
-}
-
-/* imagen */
-.producto img {
-    max-width: 100%;
-    /* la imagen ocupa el 100% del contenedor */
-    height: auto;
-    /* mantiene la proporcion de la imagen*/
-}
-
-/*  texto del precio */
-.producto .precio {
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-/*  texto del producto */
-.producto p {
-    font-size: 0.9rem;
-    color: var(--color-black);
-}
-
-
-
-/*    boton de compra */
-.producto .boton-compra {
-    background-color: var(--color-pink-violet);
-    color: var(--color-black);
-    border: 2px solid rgba(0, 0, 0, 0.596);
-    border-radius: 10px;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.producto button:hover {
-    background-color: var(--color-pink);
-    color: var(--color-white);
-}
-
+/* Footer */
 footer {
-    padding: 10px;
-    text-align: center;
+  padding: 10px;
+  text-align: center;
 }
+
+/* ----------------------------------------------------------------- */
 
 /* Media Queries para pantallas medianas (tablets) */
 @media (max-width: 768px) {
+  #contacto form {
+    width: 80%; /* Cambiar el ancho del formulario a un 80% en pantallas pequeñas */
+    padding: 15px; /* Reducimos un poco el padding para que no quede tan apretado */
+  }
 
-    /* Ajustamos el tamaño del logo */
-    .logo {
-        max-width: 60px;
-    }
+  #contacto input,
+  #contacto textarea {
+    font-size: 1rem; /* Aumentamos el tamaño de fuente para mejorar la legibilidad */
+  }
 
-    /* Las tarjetas se apilan verticalmente */
-    .productos {
-        flex-direction: column;
-        align-items: center;
-    }
+  #contacto button {
+    font-size: 1.1rem; /* Aumentamos el tamaño del texto de los botones */
+    padding: 12px; /* Un poco más de espacio en los botones */
+  }
 
-    /* Ajustamos el ancho de las tarjetas */
-    .producto {
-        width: 80%;
-        /* Las tarjetas ocupan el 80% del ancho */
-    }
-
-    /* Ajustamos la altura de las imágenes del carrusel */
-    .carousel-item img {
-        height: 300px;
-    }
+  /* Ajustamos la altura de las imágenes del carrusel */
+  .carousel-item img {
+    height: 300px;
+  }
 }
 
+/* Media query para pantallas a partir de 650px */
+@media (max-width: 650px) {
+  /* Navbar se organiza en columna */
+  .navbar-items {
+    padding: 15px;
+    flex-direction: column; /* Apila el logo y el menú en una columna */
+    justify-content: flex-start;
+    align-items: center; /* Centra el contenido (logo y menú) */
+  }
+
+  /* Ocultar el logo en pantallas pequeñas */
+  .logo img {
+    display: none; /* El logo desaparecerá cuando el ancho sea menor a 650px */
+  }
+
+  /* Contenedor del menú (en grid en pantallas pequeñas) */
+  .menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra el menú horizontalmente */
+  }
+
+  /* Menú en 3 columnas usando Grid */
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 15px; /* Espacio entre las opciones */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-items: center; /* Centra las opciones dentro de las celdas */
+    width: 100%; /* Asegura que el menú ocupe todo el ancho disponible */
+  }
+
+  .menu li {
+    margin: 0;
+  }
+
+  .menu li a {
+    font-size: 14px;
+  }
+
+  main {
+    padding-top: 100px;
+  }
+}
 /* Media Queries para pantallas pequeñas (celulares) */
 @media (max-width: 480px) {
-    .botones {
-        flex-direction: column;
-    }
+  #contacto form {
+    width: 80%; /* Cambiar el ancho del formulario a un 80% en pantallas pequeñas */
+    padding: 15px; /* Reducimos un poco el padding para que no quede tan apretado */
+  }
 
-    .boton {
-        width: 100%;
-        text-wrap: wrap;
-    }
+  #contacto input,
+  #contacto textarea {
+    font-size: 1rem; /* Aumentamos el tamaño de fuente para mejorar la legibilidad */
+  }
 
-    main {
-        margin-left: 5px;
-        margin-right: 5px;
-    }
+  #contacto button {
+    font-size: 1.1rem; /* Aumentamos el tamaño del texto de los botones */
+    padding: 12px; /* Un poco más de espacio en los botones */
+  }
 
-    /* Ajustamos el tamaño del logo */
-    .logo {
-        max-width: 50px;
-    }
+  .boton {
+    width: 100%;
+    text-wrap: wrap;
+  }
 
-    /* Ajustamos el ancho de las tarjetas */
-    .producto {
-        width: 90%;
-        /* Las tarjetas ocupan el 90% del ancho */
-    }
+  main {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 
-    /* Ajustamos la altura de las imágenes del carrusel */
-    .carousel-item img {
-        height: 200px;
-    }
+  /* Ajustamos el ancho de las tarjetas */
+  .producto {
+    width: 90%;
+    /* Las tarjetas ocupan el 90% del ancho */
+  }
 
-    /* Ajustamos los títulos en el pie de página */
-    footer form h1,
-    footer h1 {
-        font-size: 20px;
-    }
+  /* Ajustamos la altura de las imágenes del carrusel */
+  .carousel-item img {
+    height: 200px; /* Ajustamos la altura de las imágenes para pantallas pequeñas */
+    object-fit: contain; /* Asegura que las imágenes mantengan su proporción */
+  }
 
-    /* Ajustamos el tamaño del enlace en el pie de página */
-    footer a {
-        font-size: 16px;
-    }
+  .carousel-inner {
+    width: 100%;
+    padding: 0 10px; /* Agrega algo de espacio alrededor para evitar que la imagen se salga */
+  }
+
+  /* Ajustamos los títulos en el pie de página */
+  footer form h1,
+  footer h1 {
+    font-size: 20px;
+  }
+
+  /* Ajustamos el tamaño del enlace en el pie de página */
+  footer a {
+    font-size: 16px;
+  }
 }
