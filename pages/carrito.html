@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/carrito.css">
     <title>Carrito</title>
 </head>
 
@@ -12,11 +13,11 @@
     <!--  Encabezado del carrito -->
     <header>
         <h1>Carrito de Compras</h1>
-        <a href="./index.html" class="icono-carrito">⬅️ Volver</a> <!-- boton de regresar -->
+        <a href="../index.html"><box-icon name='arrow-back'></box-icon>Volver</a>
     </header>
 
     <!-- Seccion principal del carrito -->
-    <section id="carrito" class="productos">
+    <section id="carrito" class="productos-carrito">
 
         <h2>Tu carrito</h2>
         <div id="lista-carrito">
@@ -33,8 +34,16 @@
 
     </section>
 
+    <script src="../js/carrito.js"></script>
 
-    <script src="./carrito.js"></script>
+    <!-- scripts de JS necesario para bootstrap y los iconos -->
+    <!--  Script de  bootstrap para funcionalidades interactivas -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!--        script para los iconos de boxIcons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
 
 </html>
