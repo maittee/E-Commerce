@@ -1,0 +1,21 @@
+/* --- Estilos de productos-carrito --- */
+.productos-carrito {
+    display: grid;
+    /* Distribución en cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Ajuste automático */
+    gap: 20px;
+    /* Separación entre productos */
+    margin-top: 20px;
+    /* Margen superior */
+}
+
+/* Estilo para el contador del carrito */
+#contador-carrito {
+    background-color: var(--color-dark-violet);
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 100%;
+}
+
