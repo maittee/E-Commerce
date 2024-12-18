@@ -7,18 +7,22 @@ const mostrarCarrito = () => {
     lista.innerHTML = "";
 
     if (carrito.length === 0) {
-        lista.innerHTML = '<p>Tu carrito está vacio</p>';
+        lista.innerHTML = '<p>Tu carrito está vacío</p>';
         actualizarResumen();
         return;
     }
 
     carrito.forEach((item, indice) => {
         const producto = document.createElement("article");
-        producto.classList.add("producto");
+        producto.classList.add("producto-carrito");
         producto.innerHTML = `
             <h2>${item.nombre}</h2>
-            <p class="precio">$${item.precio}</p>
-            <button onclick="eliminarDelCarrito(${indice})" class="botones boton-eliminar">Eliminar</button>
+            <p class="precio">Precio unitario: $${item.precio}</p>
+            <p>Cantidad: ${item.cantidad}</p>
+            <div>
+                <button onclick="agregarUnidad(${indice})" class="botones-carrito boton-agregar">Agregar</button>
+                <button onclick="eliminarDelCarrito(${indice})" class="botones-carrito  boton-eliminar">Eliminar</button>
+            </div>
         `;
         lista.appendChild(producto);
     });
@@ -30,24 +34,40 @@ const mostrarCarrito = () => {
 const actualizarResumen = () => {
     const totalProductos = document.getElementById("total-productos");
     const importeTotal = document.getElementById("importe-total");
-
-    const total = carrito.reduce((acc, item) => acc + item.precio, 0);
-    totalProductos.textContent = carrito.length;
-    importeTotal.textContent = total.toFixed(2);
-
     const botonCompra = document.querySelector("button[onclick='realizarCompra()']");
+    const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
+    const cantidadTotal = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+    totalProductos.textContent = cantidadTotal; importeTotal.textContent = total.toFixed(2);
+
+    // si el carrito esta vacio, desactivar boton de compra
+    if (carrito.length === 0) {
+        botonCompra.disabled = true;
+    }
+    else {
+        botonCompra.disabled = false;
+    }
     const resumenCarrito = document.getElementById("resumen-carrito");
     resumenCarrito.appendChild(botonCompra);
 };
 
-// Elimina un producto del carrito
+// función para agregar una unidad de un producto existente en el carrito 
+const agregarUnidad = (indice) => {
+    carrito[indice].cantidad += 1;
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    mostrarCarrito();
+}
+
+// función para eliminar un producto del carrito
 const eliminarDelCarrito = (indice) => {
-    carrito.splice(indice, 1);
+    carrito[indice].cantidad -= 1;
+    if (carrito[indice].cantidad <= 0) {
+        carrito.splice(indice, 1);
+    }
     localStorage.setItem("carrito", JSON.stringify(carrito));
     mostrarCarrito();
 };
 
-// Simula la compra
+// función para simular la compra
 const realizarCompra = () => {
     alert("Compra realizada con éxito");
     localStorage.removeItem("carrito");
