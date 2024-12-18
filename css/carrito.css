@@ -19,3 +19,37 @@
     border-radius: 100%;
 }
 
+/* Botones del carrito*/
+.botones {
+    border: 2px solid rgba(0, 0, 0, 0.596);
+    border-radius: 10px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease-in-out;
+    color: var(--color-black);
+}
+
+.boton-compra {
+    background-color: var(--color-pink-violet);
+}
+
+.boton-eliminar {
+    background-color: var(--color-red);
+}
+
+.boton-compra:hover {
+    background-color: var(--color-pink);
+    color: var(--color-white);
+}
+
+.boton-eliminar:hover {
+    background-color: var(--color-dark-red);
+    color: var(--color-white);
+}
+
+/* Pantallas medianas (tablets) */
+@media (max-width: 768px) {}
+
+/* Pantallas pequeñas (celular) */
+@media (max-width: 480px) {}
