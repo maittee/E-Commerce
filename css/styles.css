@@ -7,6 +7,8 @@
   --color-violet: #a39ddf;
   --color-pink-violet: #e6d5ed;
   --color-white: rgb(255, 255, 255);
+  --color-red: rgb(177, 54, 74);
+  --color-dark-red: rgb(90, 20, 31);
   --tipo-principal: "Roboto Mono", monospace;
 }
 
@@ -77,6 +79,7 @@ section {
   padding: 0 25px;
   transition: all 0.5s ease;
   z-index: 1000;
+  
 }
 
 /*Menu del navbar*/
