@@ -12,8 +12,10 @@
 <body>
     <!--  Encabezado del carrito -->
     <header>
-        <h1>Carrito de Compras</h1>
-        <a href="../index.html"><box-icon name='arrow-back'></box-icon></a>
+        <h1 class="centrar">Carrito de Compras</h1>      
+        <div>
+            <a href="../index.html" class="volver-atras">🡸Volver al inicio</a>
+        </div>
     </header>
 
     <!-- Seccion principal del carrito -->
@@ -28,8 +30,7 @@
             <p>Importe total: $<span id="importe-total">0</span></p>
         </div>
 
-        <button onclick="realizarCompra()" class="botones boton-compra">Finalizar la compra</button><!--  boton de compra -->
-
+        <button onclick="realizarCompra()" class="botones-carrito boton-compra">Finalizar la compra</button><!--  boton de compra -->
     </section>
 
     <script src="../js/carrito.js"></script>
@@ -39,9 +40,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-
-    <!--        script para los iconos de boxIcons -->
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
 
 </html>
