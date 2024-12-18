@@ -44,4 +44,30 @@ const productos = [
     },
 ];
 
+// funcion para mostrar los productos
+const mostrarProductos = () => {
+    const contenedorProductos = document.querySelector('.productos');
+    contenedorProductos.innerHTML = '';
 
+    productos.forEach(producto => {
+        const productoHTML = `
+            <div class="producto">
+                <img src="${producto.imagen}" alt="${producto.nombre}">
+                <div class="info-producto">
+                    <h3>${producto.nombre}</h3>
+                    <p class="body-producto">${producto.descripcion}</p>
+                    <div class="precio-carro">
+                        <p class="precio">Desde $${producto.precio}</p>
+                        <button onclick="agregarAlcarrito('${producto.nombre}', ${producto.precio})" class="agregar-carrito boton-compra">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        contenedorProductos.innerHTML += productoHTML;
+    });
+};
+
+// se llama a la funcion para mostrar los productos al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    mostrarProductos();
+});
