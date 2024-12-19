@@ -57,6 +57,7 @@ section {
 .centrar {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 /* Logo */
@@ -162,6 +163,7 @@ section {
 /* Formulario - Contacto*/
 #contacto {
   margin-top: 10px;
+  scroll-margin-top: 0px;
 }
 
 #contacto form {
@@ -316,9 +318,32 @@ footer {
   header {
     padding-top: 90px;
   }
+
+  #contacto {
+    margin-top: 10px;
+    scroll-margin-top: 90px;
+  }
 }
 /* Media Queries para pantallas pequeñas (celulares) */
 @media (max-width: 480px) {
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 3 columnas */
+    gap: 0.5rem; 
+    list-style: none;
+    justify-items: center; 
+    width: 100%; 
+  }
+
+  
+  header {
+    padding-top: 180px;
+  }
+  
+  #contacto {
+    scroll-margin-top: 180px;
+  }
+
   #contacto form {
     width: 80%; /* Cambiar el ancho del formulario a un 80% en pantallas pequeñas */
     padding: 15px; /* Reducimos un poco el padding para que no quede tan apretado */
