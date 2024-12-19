@@ -17,6 +17,7 @@
   margin: 0 auto;
   text-align: justify;
   color: var(--color-white);
+  padding: 15px;
 }
 
 /* Media Query para pantallas medianas (tablets) */

@@ -24,7 +24,7 @@ const productos = [
     {
         "id": 4,
         "nombre": "Torta Elvis",
-        "descripcion": "La torta puede ser de 20 a 25 porciones. El bizcocho como el relleno es a pedido del cliente. La decoración se hace con Buttercream. Puede colocarse una dedicatoria, esto tiene un adicional de $2.",
+        "descripcion": "La torta puede ser de 20 a 25 porciones. El bizcocho como el relleno es a pedido del cliente. La decoración se hace con Buttercream.",
         "precio": 200,
         "imagen": "../img/torta-cuy.jpg"
     },
@@ -57,7 +57,7 @@ const mostrarProductos = () => {
                     <h3>${producto.nombre}</h3>
                     <p class="body-producto">${producto.descripcion}</p>
                     <div class="precio-carro">
-                        <p class="precio">Desde $${producto.precio}</p>
+                        <p class="precio">Precio $${producto.precio}</p>
                         <button onclick="agregarAlcarrito('${producto.nombre}', ${producto.precio})" class="agregar-carrito boton-compra">Añadir al Carrito</button>
                     </div>
                 </div>
