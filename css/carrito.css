@@ -7,24 +7,6 @@
     border-radius: 100%;
 }
 
-/* boton para volver atras*/
-.volver-atras {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    padding: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.volver-atras:hover {
-    padding: 2px;
-    font-weight: bold;
-    border-radius: 20px;
-    transition: all 0.5s ease;
-}
-
 /* --- Estilos de productos-carrito --- */
 .productos-carrito {
     margin: 20px;
@@ -48,6 +30,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+}
+
+#msj-carrito-vacio{
+    font-size: 30px;
 }
 
 #resumen-carrito {
@@ -91,23 +77,43 @@
     color: var(--color-white);
 }
 
-.boton-agregar {
+.boton-agregar,
+.boton-disminuir {
     background-color: var(--color-violet);
     color: var(--color-black);
-    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 0 4px;
+    font-size: 1rem;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
 }
 
-.boton-agregar:hover {
+.boton-agregar:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+.boton-agregar:hover:not(:disabled),
+.boton-disminuir:hover {
     background-color: var(--color-medium-violet);
     color: var(--color-white);
 }
 
-/* Pantallas medianas (tablets) */
-@media (max-width: 768px) {
-
+.cantidad {
+    margin: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
+
+/* Pantallas medianas (tablets) */
+@media (max-width: 768px) {}
 
 /* Pantallas pequeñas (celular) */
-@media (max-width: 480px) {
-    
-}
+@media (max-width: 480px) {}
