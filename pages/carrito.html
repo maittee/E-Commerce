@@ -28,21 +28,23 @@
 
   <body>
     <!--  Encabezado del carrito -->
-    <header>
-      <nav class="navbar-items sticky-top">
-        <div class="logo centrar">
-          <img src="../img/Logo.jpg" alt="Logo de la tienda ´Mai & Lu´" />
-        </div>
+    <nav class="navbar-items sticky-top">
+      <div class="logo centrar">
+        <img src="../img/Logo.jpg" alt="Logo de la tienda ´Mai & Lu´" />
+      </div>
 
-        <div>
-          <ul class="menu">
-            <li><a href="javascript:void(0);" onclick="volverPaginaAnterior()">🡸 Volver</a></li>
-          </ul>
-        </div>
-      </nav>
+      <div>
+        <ul class="menu">
+          <li><a href="javascript:void(0);" onclick="volverPaginaAnterior()">🡸 Volver</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header>
+      <h2 class="centrar subtitulo">Carrito de Compras</h2>
     </header>
 
-    <main>
+    <main class="main-carrito">
         <!-- Seccion principal del carrito -->
       <section id="carrito" class="productos-carrito">
         <div id="lista-carrito">
@@ -55,9 +57,7 @@
           <p>Importe total: $<span id="importe-total">0</span></p>
         </div>
 
-        <button onclick="realizarCompra()" class="botones-carrito boton-compra">
-          Finalizar la compra</button
-        ><!--  boton de compra -->
+        <button onclick="realizarCompra()" class="botones-carrito boton-compra">Finalizar la compra</button>
       </section>
     </main>
    

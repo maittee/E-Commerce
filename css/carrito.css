@@ -7,6 +7,11 @@
     border-radius: 100%;
 }
 
+.main-carrito {
+    justify-content: start;
+    align-items: center;
+}
+
 /* --- Estilos de productos-carrito --- */
 .productos-carrito {
     margin: 20px;
@@ -32,7 +37,7 @@
     justify-content: space-between;
 }
 
-#msj-carrito-vacio{
+#msj-carrito-vacio {
     font-size: 30px;
 }
 
@@ -41,9 +46,9 @@
     background-color: var(--color-dark-violet);
     color: var(--color-white);
     margin: 10px;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
-    box-shadow: 0 4px 8px var(--color-black);
+
     box-sizing: border-box;
     border-radius: 10px;
 }
@@ -111,9 +116,3 @@
     align-items: center;
     justify-content: center;
 }
-
-/* Pantallas medianas (tablets) */
-@media (max-width: 768px) {}
-
-/* Pantallas pequeñas (celular) */
-@media (max-width: 480px) {}

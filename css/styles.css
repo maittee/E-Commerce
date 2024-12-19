@@ -29,6 +29,7 @@ body {
 header {
   width: 100%;
   height: auto;
+  padding-top: 60px;
 }
 
 main {
@@ -36,7 +37,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 60px;
+  /* padding-top: 60px; */
   height: auto;
 }
 
@@ -312,8 +313,8 @@ footer {
     margin-top: 10px;
   }
 
-  main {
-    padding-top: 100px;
+  header {
+    padding-top: 90px;
   }
 }
 /* Media Queries para pantallas pequeñas (celulares) */
@@ -339,11 +340,6 @@ footer {
     align-items: center; 
     flex-wrap: wrap;
     width: 100%; 
-  }
-
-  main {
-    margin-left: 5px;
-    margin-right: 5px;
   }
 
   /* Ajustamos la altura de las imágenes del carrusel */

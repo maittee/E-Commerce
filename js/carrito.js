@@ -17,12 +17,13 @@ const mostrarCarrito = () => {
 
     producto.classList.add("producto-carrito");
     producto.innerHTML = `
-            <h2>${item.nombre}</h2>
+            <h4>${item.nombre}</h4>
             <p class="precio">Precio unitario: $${item.precio}</p>
             <div class="cantidad">
-                <button onclick="agregarUnidad(${indice})" class="botones-carrito boton-agregar"${
-      item.cantidad >= 3 ? " disabled" : ""
-    }>+</button>
+                <button onclick="agregarUnidad(${indice})" class="botones-carrito boton-agregar"
+                ${
+                  item.cantidad >= 3 ? " disabled" : ""
+                }>+</button>
                 <p>Cantidad: ${item.cantidad} </p>    
                 <button onclick="disminuirUnidad(${indice})" class="botones-carrito boton-disminuir">-</button>
             </div>

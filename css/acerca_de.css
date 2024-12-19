@@ -1,11 +1,16 @@
 #acerca-de {
-  margin-top: 10px;
   background-color: var(--color-violet);
   color: var(--color-white);
   text-align: center;
 }
 
-#acerca-de h3.subtitulo {
+.header-acerca-de {
+  margin-top: 10px;
+  background-color: var(--color-violet);
+  color: var(--color-white);
+  text-align: center;
+}
+.header-acerca-de h3.subtitulo {
   font-weight: bold;
   margin: 10px;
 }
